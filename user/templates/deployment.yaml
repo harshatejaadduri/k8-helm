@@ -1,0 +1,37 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: user
+ namespace: roboshop
+ labels:
+  environment: dev
+  component: user
+  tier: backend
+spec:  
+ replicas: 1
+ selector:
+  matchLabels:
+    environment: dev
+    component: user
+    tier: backend
+ template:
+  metadata:
+   labels:
+    environment: dev
+    component: user
+    tier: backend   
+  spec: 
+   containers:
+    - name: user
+      image: harshatejaadduri/user:v2
+      envFrom:
+       - configMapRef:
+          name: user
+      resource:
+       requests:
+        cpu: "50m"
+        memory: "128Mi"
+       limits:
+        cpu: "100m"
+        memory: "256Mi"  

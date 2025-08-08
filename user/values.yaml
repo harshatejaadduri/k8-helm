@@ -1,0 +1,5 @@
+deployment:
+  imageVersion: harshatejaadduri/user:v2
+hpa:
+  avgcpu: 75
+  

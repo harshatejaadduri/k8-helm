@@ -1,0 +1,5 @@
+deployment:
+  imageVersion: harshatejaadduri/shipping:v2
+hpa:
+  avgcpu: 75
+  

@@ -1,0 +1,37 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: shipping
+ namespace: roboshop
+ labels:
+  component: shipping
+  environment: dev
+  tier: backend
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+    component: shipping
+    environment: dev
+    tier: backend
+ template:
+  metadata:
+   labels: 
+    component: shipping
+    environment: dev
+    tier: backend
+  spec:
+   containers:
+    - name: shipping
+      image: harshatejaadduri/shipping:v2
+      envFrom:
+       - configMapRef:
+          name: shipping
+      resource:
+       requests:
+        cpu: "50m"
+        memory: "128Mi"
+       limits:
+        cpu : "100m" 
+        memory: "256Mi"

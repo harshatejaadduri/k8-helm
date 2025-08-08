@@ -1,0 +1,5 @@
+deployment:
+  imageVersion: harshatejaadduri/payment:v2
+hpa:
+  avgcpu: 75
+  

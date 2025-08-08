@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Secret
+metadata:
+ name: mysql 
+ namespace: roboshop
+ labels:
+  component: mysql
+  environment: dev
+  tier: database
+
+type: Opaque
+data:
+ MYSQL_ROOT_PASS: "Um9ib1Nob3BAMQ=="

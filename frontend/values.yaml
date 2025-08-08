@@ -1,0 +1,5 @@
+deployment:
+  imageVersion: harshatejaadduri/frontend:v2
+hpa:
+  avgcpu: 75
+  

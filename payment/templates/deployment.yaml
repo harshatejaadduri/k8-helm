@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+ name: payment
+ namespace: roboshop
+ labels:
+  component: payment
+  environment: dev
+  tier: backend
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+    component: payment
+    environment: dev
+    tier: backend
+ template:
+  metadata:
+   labels:
+    component: payment
+    environment: dev
+    tier: backend
+  spec:
+   containers:
+    - name: payment
+      image: harshatejaadduri/payment:v2
+      envFrom:
+       - configMapRef: 
+          name: payment
+       - secretRef:
+          name: payment
+      resource:
+       requests:
+        cpu: "50m"
+        memory: "128Mi"
+       limits:
+        cpu: "100m"
+        memory: "256Mi"      

@@ -1,0 +1,5 @@
+statefulset:
+  imageVersion: harshatejaadduri/mysql:v2
+hpa:
+  avgcpu: 75
+  
