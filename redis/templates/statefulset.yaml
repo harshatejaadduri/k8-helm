@@ -9,7 +9,7 @@ metadata:
   environment: dev
   tier: database
 spec:
- replicas: 2
+ replicas: 1
  storageClassName: "redis-ebs-headless"
  selector:
   matchLabels:
