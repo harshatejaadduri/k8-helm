@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: harshatejaadduri/mongodb:v2
+          image: "{{ .Values.satefulset.image }}:{{ .Values.statefulset.version }}"
           volumeMounts:
             - name: mongodb-vol
               mountPath: /data/db

@@ -1,11 +1,11 @@
 apiVersion: v1 
 kind: ConfigMap
 metadata: 
-  name: catalogue
+  name: mongodb
   namespace: roboshop
   labels:
      project: roboshop
-     app: catalogue
+     app: mongodb
      tier: backend  
 
 data:
