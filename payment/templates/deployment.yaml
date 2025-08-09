@@ -29,7 +29,7 @@ spec:
           name: payment
        - secretRef:
           name: payment
-      resource:
+      resources:
        requests:
         cpu: "50m"
         memory: "128Mi"
