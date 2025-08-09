@@ -24,7 +24,7 @@ spec:
   spec:
    containers:
     - name: shipping
-      image: harshatejaadduri/shipping:v2
+      image: {{ .Values.deployment.imageVersion }}
       envFrom:
        - configMapRef:
           name: shipping

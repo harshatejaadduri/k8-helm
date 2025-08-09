@@ -1,5 +1,2 @@
-deployment:
+statefulset:
   imageVersion: harshatejaadduri/redis:v2
-hpa:
-  avgcpu: 75
-  

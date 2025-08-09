@@ -23,7 +23,7 @@ spec:
   spec:
    containers:
     - name: payment
-      image: harshatejaadduri/payment:v2
+      image: {{ .Values.deployment.imageVersion }}
       envFrom:
        - configMapRef: 
           name: payment
