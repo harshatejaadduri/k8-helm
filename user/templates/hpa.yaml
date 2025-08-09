@@ -17,5 +17,5 @@ metrics:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 10
+        averageUtilization: {{ .Values.hpa.avgcpu }}
 

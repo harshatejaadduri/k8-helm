@@ -28,7 +28,7 @@ spec:
       envFrom:
        - configMapRef:
           name: user
-      resource:
+      resources:
        requests:
         cpu: "50m"
         memory: "128Mi"
