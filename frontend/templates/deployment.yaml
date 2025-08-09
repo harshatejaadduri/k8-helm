@@ -25,7 +25,7 @@ spec:
     containers:
       - name: frontend
         image: {{ .Values.deployment.imageVersion }}
-        resource:
+        resources:
          requests:
           cpu: "50m"
           memory: "128Mi"
