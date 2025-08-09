@@ -1,3 +1,3 @@
 statefulset:
-  image: "harshatejaadduri/mongodb"
+  image: harshatejaadduri/mongodb
   version: "v2"
