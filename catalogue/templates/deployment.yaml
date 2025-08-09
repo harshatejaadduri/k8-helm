@@ -24,9 +24,6 @@ spec:
    containers:
     - name: catalogue
       image: {{ .Values.deployment.imageVersion }}
-      envFrom:
-       - configMapRef:
-          name: catalogue 
       resource:
         requests:
           cpu: "50m"
@@ -34,3 +31,6 @@ spec:
         limits:
           cpu: "100m"
           memory: "256Mi"    
+      envFrom:
+       - configMapRef:
+          name: catalogue     
