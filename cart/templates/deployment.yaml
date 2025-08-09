@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: catalogue
+  name: cart
   namespace: roboshop
   labels:
    project: roboshop
-   app: catalogue
+   app: cart
    tier: backend
 spec:   
   replicas: 1
   selector:
     matchLabels:
       project: roboshop
-      app: catalogue
+      app: cart
       tier: backend
   template:
     metadata:
       labels:
         project: roboshop
-        app: catalogue
+        app: cart
         tier: backend
     spec:
       containers:
-       - name: catalogue
-         image: harshatejaadduri/catalogue:v2
+       - name: cart
+         image: harshatejaadduri/cart:v2
          envFrom:
          - configMapRef:
-            name: catalogue
+            name: cart
          resources:
           requests:
             cpu: "50m"
