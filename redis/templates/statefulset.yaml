@@ -10,7 +10,7 @@ metadata:
   tier: database
 spec:
  replicas: 1
- storageClassName: "roboshop-ebs-sc"
+ serviceName: "redis-ebs-headless"
  selector:
   matchLabels:
     component: redis
