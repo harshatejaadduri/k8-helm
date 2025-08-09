@@ -34,7 +34,7 @@ spec:
          mountPath: /var/lib/rabbitmq
  volumeClaimTemplates:
  - metadata:
-   name: rabbitmq-vol
+    name: rabbitmq-vol
    spec:
         accessModes: [ "ReadWriteOnce" ]
         storageClassName: "roboshop-ebs-sc"
