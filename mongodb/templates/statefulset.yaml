@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: "{{ .Values.statefulset.image }}:{{ .Values.statefulset.version }}"
+          image: {{ .Values.statefulset.imageVersion }}
 
           volumeMounts:
             - name: mongodb-vol
