@@ -10,9 +10,9 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-        component: frontend
-        environment: dev
-        tier: web   
+    component: frontend
+    environment: dev
+    tier: web   
   ports:
     - protocol: TCP
       port: 80
