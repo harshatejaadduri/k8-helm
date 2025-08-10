@@ -4,9 +4,9 @@ metadata:
   name: cart
   namespace: roboshop
   labels:
-    component: cart
-    tier: backend
-    environment: dev   
+   project: roboshop
+   app: cart
+   tier: backend   
 data:
  REDIS_HOST: "redis" 
  CATALOGUE_HOST: "catalogue" 

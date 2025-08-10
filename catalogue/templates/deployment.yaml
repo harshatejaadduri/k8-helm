@@ -4,22 +4,22 @@ metadata:
  name: catalogue
  namespace: roboshop
  labels:
-  component: catalogue
-  tier: backend
-  environment: dev
+  project: roboshop
+  app: catalogue
+  tier: backend  
 spec:
  replicas: 1
  selector:
   matchLabels: 
-    component: catalogue
-    tier: backend
-    environment: dev
+    project: roboshop
+    app: catalogue
+    tier: backend  
  template:
   metadata:
    labels:
-    component: catalogue
-    tier: backend
-    environment: dev   
+    project: roboshop
+    app: catalogue
+    tier: backend    
   spec: 
    containers:
     - name: catalogue
